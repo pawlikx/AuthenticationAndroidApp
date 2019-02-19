@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+    >
+
+        <ImageView
+                android:id="@+id/fingerprint_icon"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_fingerprint_black_24dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ustaw PIN"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000000"
+        />
+        <TextView
+                android:id="@+id/finger_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Numer ten będzie wykorzytywany poźniej do logowania. Umożliwi on również alternatywne logowanie poprzez skaner linii papilarnych"
+                android:textSize="17sp"
+                android:layout_marginBottom="15dp"
+        />
+
+        <com.goodiebag.pinview.Pinview
+                android:id="@+id/pinView_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pinWidth="50dp"
+                app:pinHeight="50dp"
+                app:pinLength="4"
+                app:forceKeyboard="true"
+                app:inputType="number"
+                app:cursorVisible="true"
+                app:password="true"/>
+
+        <Button
+                android:id="@+id/accept_btn"
+                style="?android:textAppearanceSmall"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Potwierdź"
+                android:textStyle="bold"
+                android:textColor="#232323"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

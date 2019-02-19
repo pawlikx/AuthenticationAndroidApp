@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+
+                tools:context=".Login2Activity">
+
+    <!-- Login progress -->
+    <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+
+    <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+    >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Witaj w aplikacji"
+                android:textSize="28sp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Podaj PIN"
+                android:textSize="18sp"/>
+
+        <com.goodiebag.pinview.Pinview
+                android:id="@+id/pinView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pinWidth="50dp"
+                app:pinHeight="50dp"
+                app:pinLength="4"
+                app:forceKeyboard="true"
+                app:inputType="number"
+                app:cursorVisible="true"
+                app:password="true"/>
+
+        <Button
+                android:id="@+id/sign_in_button"
+                style="?android:textAppearanceSmall"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/action_sign_in"
+                android:textStyle="bold"
+                android:textColor="#232323"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="lub zaloguj się odciskiem palca"
+                android:textSize="18sp"/>
+
+        <ImageView
+                android:id="@+id/fingerprint_btn"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                android:scaleType="fitXY"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_fingerprint_black_24dp"/>
+
+        <TextView
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                android:textSize="1sp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/colorPrimary">
+
+        <Button
+                android:id="@+id/deleteDataBtn_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginRight="0dp"
+                android:gravity="center_horizontal"
+                android:text="Usuń dane"
+        />
+    </LinearLayout>
+</RelativeLayout>
